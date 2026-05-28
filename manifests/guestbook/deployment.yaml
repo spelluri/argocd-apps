@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: guestbook-ui
-        image: nginx:alpine        ← ARM64 compatible!
+        image: nginx:alpine        
         ports:
         - containerPort: 80
