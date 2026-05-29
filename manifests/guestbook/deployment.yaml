@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
+        version: "v2"
     spec:
       containers:
       - name: guestbook-ui
