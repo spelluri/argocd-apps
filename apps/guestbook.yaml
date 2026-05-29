@@ -8,10 +8,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/spelluri/argocd-apps  # YOUR repo!
+    repoURL: https://github.com/spelluri/argocd-apps
     targetRevision: HEAD
-    path: manifests/guestbook                          # YOUR manifests!
+    path: manifests/guestbook
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-  syncPolicy: {}
+  syncPolicy:
+    automated:
+      prune: true
+      # selfHeal: true  ← REMOVED!
+    syncOptions:
+      - CreateNamespace=true
