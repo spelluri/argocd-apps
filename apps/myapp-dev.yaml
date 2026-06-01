@@ -13,11 +13,8 @@ spec:
     path: charts/myapp
     helm:
       releaseName: myapp-dev
-      values: |
-        replicaCount: 1
-        image:
-          repository: nginx
-          tag: alpine
+      valueFiles:
+        - ../../environments/dev/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp-dev
