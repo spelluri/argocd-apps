@@ -1,0 +1,9 @@
+# environments/prod/values.yaml
+replicaCount: 3
+image:
+  repository: nginx
+  tag: "1.25"
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
