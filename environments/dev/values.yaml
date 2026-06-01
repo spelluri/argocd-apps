@@ -1,0 +1,9 @@
+# environments/dev/values.yaml
+replicaCount: 1
+image:
+  repository: nginx
+  tag: alpine
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
