@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomize-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: kustomize-app
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
