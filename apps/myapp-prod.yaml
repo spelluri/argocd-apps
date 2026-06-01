@@ -11,13 +11,8 @@ spec:
     repoURL: https://github.com/spelluri/argocd-apps
     targetRevision: HEAD
     path: charts/myapp
-    helm:
-      releaseName: myapp-prod
-      values: |
-        replicaCount: 3
-        image:
-          repository: nginx
-          tag: alpine
+    valueFiles:
+        - ../../environments/prod/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp-prod
