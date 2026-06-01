@@ -14,7 +14,7 @@ spec:
     helm:
       releaseName: myapp
       values: |
-        replicaCount: 2
+        replicaCount: 3
         image:
           repository: nginx
           tag: alpine
