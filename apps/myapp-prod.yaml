@@ -11,7 +11,9 @@ spec:
     repoURL: https://github.com/spelluri/argocd-apps
     targetRevision: HEAD
     path: charts/myapp
-    valueFiles:
+    helm:
+      releaseName: myapp-prod
+      valueFiles:
         - ../../environments/prod/values.yaml
   destination:
     server: https://kubernetes.default.svc
