@@ -1,8 +1,0 @@
-p, role:developer, applications, get, frontend-team/*
-p, role:developer, applications, sync, frontend-team/*
-p, role:developer, applications, list, frontend-team/*
-p, role:developer, logs, get, frontend-team/*
-p, role:readonly, applications, get, */*
-p, role:readonly, applications, list, */*
-g, alice, role:developer
-g, bob, role:readonly
